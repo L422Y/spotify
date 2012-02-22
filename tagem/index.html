@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>tagem</title>
+    <link rel="stylesheet" href="sp://import/css/adam.css">
+    <link rel="stylesheet" href="tagem.css">
+    <script src="sp://tagem/genres.js"></script>
+    <script src="sp://tagem/jquery.js"></script>
+    <script src="sp://tagem/lastfm.js"></script>
+</head>
+<body onload="sp = getSpotifyApi(1); tagem = sp.require('tagem'); tagem.init();">
+<div top>
+<header></header>
+<tags></tags>
+</div>
+<div resultsPane>
+<div pagination>
+    <span prev>Previous</span>
+    <span next>Next</span>
+</div>
+    <div head>
+    </div>
+    <div results></div>
+</div>
+
+</body>
+</html>

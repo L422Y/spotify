@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    overflow-y: scroll;
+}
+
+[top] {
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    right: 0;
+    left: 0;
+    height: 136px;
+    bottom: 0;
+}
+
+header {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header name {
+    display: block;
+}
+
+header name[track] {
+    font-size: 23px;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+header name[album] {
+    font-size: 13px;
+}
+
+header name[artist] {
+    font-size: 20px;
+}
+
+tags {
+    background: rgba(0, 0, 0, 0.6);
+    display: block;
+    margin: 0px auto;
+    padding: 10px 0;
+    min-height: 20px;
+    text-align: center;
+}
+
+tags a {
+    font-size: 10px;
+    padding: 4px 8px;
+    background: #222;
+    -webkit-border-radius: 4px;
+    margin: 2px;
+}
+
+tags a[query] {
+    background: #444;
+    color: #eee;
+}
+
+tags a:not([query]) {
+    text-decoration: none;
+}
+
+[results] div[track].active,
+tags a.active {
+    color: #fff !important;
+    background: rgba(146, 148, 120, 0.75) !important;
+}
+
+[resultsPane] {
+    margin-top: 136px;
+}
+
+[resultsPane] [head] {
+    background: rgba(146, 148, 120, 0.2) !important;
+    padding: 4px 0;
+    text-align: center;
+}
+
+[resultsPane] [head]:empty {
+    padding: 0;
+}
+
+[resultsPane] [pagination] {
+    position: relative;
+    width: 100%;
+}
+
+[resultsPane] [pagination] > * {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.2) !important;
+    color: #eee;
+    display: block;
+    float: left;
+    position: absolute;
+    width: 70px;
+    text-align: center;
+    padding: 2px 0;
+    margin: 2px;
+    display: none;
+}
+
+[resultsPane] [pagination] [prev] {
+    left: 0;
+}
+
+[resultsPane] [pagination] [next] {
+    right: 0;
+}
+
+
+[results] {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 40px;
+    overflow-y: scroll;
+    margin: 0 auto;
+}
+
+[results] div[track] {
+    cursor: pointer;
+    display: table-row;
+    background: rgba(0, 0, 0, 0.05);
+
+    color: #aaa;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 0.1s, 0.5s;
+}
+
+[results] [track] > * {
+    padding: 4px 0;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 0.1s, 0.5s;
+    display: table-cell;
+}
+
+[results] div[track]:hover {
+    background: rgba(255, 255, 255, 0.4) !important;
+}
+
+[results] div[track]:hover > * {
+
+    color: #fff !important;
+}
+
+[results] [track] > *:first-child {
+    padding-left: 10px;
+}
+
+[results] [track] > *:last-child {
+    padding-right: 10px;
+}
+
+[results] [track]:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+[results] [track] {
+    font-size: 10px;
+}
+
+.show {
+    display: block;
+}
