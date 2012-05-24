@@ -32,14 +32,11 @@ function init() {
     tags_destination = $('tags');
     results_destination = $('[resultsPane] [results]');
     results_header = $('[resultsPane] [head]');
-
-    nav_prev = $('[resultsPane] [pagination] [prev]');
-    nav_next = $('[resultsPane] [pagination] [next]');
-    nav_prev.click(handle.click.prev);
-    nav_next.click(handle.click.next);
-
     player.observe(models.EVENT.CHANGE, handle.spotify.trackchanged);
     handle.spotify.trackchanged(null);
+
+    var uri = $(this).attr('uri');
+    player.play(uri);
 }
 
 /* Event Handlers / Callbacks */
